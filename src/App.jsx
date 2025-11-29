@@ -11,12 +11,26 @@ import { Greetings } from "./Greetings";
 import { UserCard } from "./UserCard";
 import { UserInfo } from "./UserInfo";
 import { CardWrapper } from "./CardWrapper";
+import { UserDetails } from "./UserDetails";
 //creating components to render in parent node (App)
 //components are functions for displaying the ui using html(jsx)
 
 function App() {
   return (
     <div>
+      <UserDetails
+        name="Waqar"
+        isOnline={true}
+        isPremium={true}
+        isNew={true}
+        role="admin"
+      />
+      <UserDetails
+        name="Fareed"
+        isOnline={true}
+        hideOffline={false}
+        role="moderator"
+      />
       <CardWrapper title="User Profile">
         <p>Bruce lee</p>
         <p>brucelee@bl.com</p>
@@ -41,7 +55,7 @@ function App() {
       <RuleTwo />
       <RuleThree />
       <RuleFour />
-      <Button />
+      <Button text="Click here" />
     </div>
   );
 }
