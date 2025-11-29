@@ -6,15 +6,37 @@ import { RuleOne } from "./RuleOne";
 import { RuleTwo } from "./RuleTwo";
 import { RuleThree } from "./RuleThree";
 import { RuleFour } from "./RuleFour";
+import { Product } from "./Product";
+import { Greetings } from "./Greetings";
+import { UserCard } from "./UserCard";
+import { UserInfo } from "./UserInfo";
+import { CardWrapper } from "./CardWrapper";
 //creating components to render in parent node (App)
 //components are functions for displaying the ui using html(jsx)
 
 function App() {
   return (
     <div>
+      <CardWrapper title="User Profile">
+        <p>Bruce lee</p>
+        <p>brucelee@bl.com</p>
+        <p>555-443-543</p>
+      </CardWrapper>
+      <UserCard name="Fareed" age={18} city="Lahore" email="fareed@gmail.com" />
+      <Product
+        title="Lenovo Laptop"
+        price={120}
+        inStock={true}
+        categories={["Electronics", "Computers", "Gaming"]}
+      />
+      <UserInfo name="Amir" age={24} city="Lahore" email="amir@gmail.com" />
+      <Greetings message={"Good Morning"} names={"Fareed"} />
+      <Greetings names={"Waqar"} />
+      <Greetings message={"Have a Nice Day"} />
       <ReactCore />
-      <ReactCoreWithoutJsx />
-      <Welcome />
+      <Welcome name="Bilal" alias=" Fast Learner" />
+      <Welcome name="Fareed" alias=" True Leader" />
+      <Welcome name="Waqar" alias=" Smart Learner" />
       <RuleOne />
       <RuleTwo />
       <RuleThree />
