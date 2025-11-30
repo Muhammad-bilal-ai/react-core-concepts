@@ -12,12 +12,14 @@ import { UserCard } from "./UserCard";
 import { UserInfo } from "./UserInfo";
 import { CardWrapper } from "./CardWrapper";
 import { UserDetails } from "./UserDetails";
+import { ProductList } from "./ProductList";
 //creating components to render in parent node (App)
 //components are functions for displaying the ui using html(jsx)
 
 function App() {
   return (
     <div>
+      <ProductList />
       <UserDetails
         name="Waqar"
         isOnline={true}
